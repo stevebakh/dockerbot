@@ -1,0 +1,16 @@
+{
+  "name": "dockerbot",
+  "version": "0.0.1",
+  "description": "A Slack bot template based on Botkit",
+  "author": "Steven Bakhtiari",
+  "license": "MIT",
+  "main": "src/dockerbot.js",
+  "dependencies": {
+    "botkit": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/dockerbot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
