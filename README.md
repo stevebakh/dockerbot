@@ -5,7 +5,7 @@ To get you started, this bot implements a couple of basic interactions with Slac
 
 For more information on how to integrate your bot with Slack, see the [Botkit documentation](https://github.com/howdyai/botkit/blob/master/readme-slack.md).
 
-## Creating a Slack Bot using Custom Integration
+## Creating a Slack bot using a 'Custom Integration'
 This is the simplest and quickest way of adding a Bot to your Slack team. The first thing you will need to do is create a custom integration bot configuration, which you will then use to allow your code to connect to the Slack RTM (Real Time Messaging) API. 
 
 ### Configure a bot
@@ -44,6 +44,6 @@ If you now return to your Slack team and open a private message with your bot, y
 
 <p align="center"><img src="docs/4.png" width="527px"></p>
 
-## Creating a deployable App to be used by multiple teams
+## Creating a deployable app to be used by multiple teams
 
 Instructions coming...
