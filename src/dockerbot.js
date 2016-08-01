@@ -3,13 +3,13 @@ const config = { json_file_store: 'json_db' };
 
 const controller = (() => {
     if (process.env.TOKEN) {
-        // run the bot as a Slack custom integration
         return require('./custom_integration').init(
             process.env.TOKEN, 
             config, 
             initCallback);
     } else if (process.env.PORT && process.env.CLIENT_ID && process.env.CLIENT_SECRET) {
-        // run the bot as a Slack application
+        // See a list of all scopes: https://api.slack.com/docs/oauth-scopes
+        config.scopes = ['bot', 'identify', 'chat:write:bot', 'channels:read', 'users:read'];
         return require('./app').init(
             process.env.PORT, 
             process.env.CLIENT_ID, 

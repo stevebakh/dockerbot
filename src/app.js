@@ -15,7 +15,7 @@ module.exports = {
         const controller = Botkit.slackbot(config).configureSlackApp({
             clientId: clientId,
             clientSecret: clientSecret,
-            scopes: ['bot', 'identify', 'chat:write:bot', 'channels:read', 'users:read', 'chat:write:user']
+            scopes: config.scopes || []
         });
 
         controller.setupWebserver(port, (error, webserver) => {

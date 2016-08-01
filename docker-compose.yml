@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    bot:
+        build: .
+        image: dockerbot
+        stdin_open: true
+        tty: true
+        expose:
+            - "${PORT}"
+        volumes:
+            - ./json_db:/opt/bot/json_db
+        environment:
+            - TOKEN
+            - PORT
+            - CLIENT_ID
+            - CLIENT_SECRET
+    tunnel:
+        image: chuangbo/localtunnel
+        links: 
+            - bot
+        command:
+            lt -l bot -p ${PORT}
