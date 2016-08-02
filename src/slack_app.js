@@ -11,7 +11,15 @@ function handleError(error) {
 }
 
 module.exports = {
-    init: (port, clientId, clientSecret, config, callback) => {
+    init: (config, callback) => {
+        const port = process.env.PORT || 8080;
+        const clientId = process.env.CLIENT_ID;
+        const clientSecret = process.env.CLIENT_SECRET;
+
+        if (!clientId || !clientSecret) {
+            handleError('Both the CLIENT_ID and CLIENT_SECRET environment variables must be set!');
+        }
+
         const controller = Botkit.slackbot(config).configureSlackApp({
             clientId: clientId,
             clientSecret: clientSecret,

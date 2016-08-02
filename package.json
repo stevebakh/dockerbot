@@ -1,12 +1,12 @@
 {
   "name": "dockerbot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Slack bot template based on Botkit",
   "author": "Steven Bakhtiari",
   "license": "MIT",
   "main": "src/dockerbot.js",
   "dependencies": {
-    "botkit": "latest"
+    "botkit": "0.2.2"
   },
   "devDependencies": {},
   "scripts": {

@@ -11,10 +11,13 @@ services:
         volumes:
             - ./json_db:/opt/bot/json_db
         environment:
-            - TOKEN
             - PORT
+            - TOKEN
             - CLIENT_ID
             - CLIENT_SECRET
+            - PAGE_TOKEN
+            - VERIFY_TOKEN
+            - BOT_PLATFORM
     tunnel:
         image: chuangbo/localtunnel
         links: 
