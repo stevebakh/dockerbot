@@ -103,19 +103,19 @@ Now select a name for your application.
 
 Provide an email address and select 'App for pages' in the category select box. Provide a valid URL when asked (this is unimportant).
 
-<p align="center"><img src="docs/fb_3.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_3.png" width="600px" align="center"></p>
 
 ### Create a Facebook page
 Next, create a page and give it a name and a custom path. You can leave all other settings unchanged and skip them.
 
-<p align="center"><img src="docs/fb_4.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_4.png" width="600px" align="center"></p>
 
 ### Configure access to the Messenger platform
 Go to the Developer Dashboard for your new app, and from the left hand menu, select 'Add product' and then choose 'Messenger' from the options. The following page will have a few sections. First, under the Token Generation, select the page that you created previously. It will auth before presenting you with the token. Take note of that token.
 
-<p align="center"><img src="docs/fb_5.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_5.png" width="600px" align="center"></p>
 
-<p align="center"><img src="docs/fb_6.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_6.png" width="600px" align="center"></p>
 
 ### Checkout the code
 Clone this repository and edit the `.env` file, assigning the token just obtained to the `PAGE_TOKEN` environment variable. You should also set the `VERIFY_TOKEN` to a random value of your choice. Finally, set the `BOT_PLATFORM` variable to 'facebook_app'. Assuming you're not running on a Linux machine, you will want to make sure docker-machine and docker are installed, and that you have a running virtual machine. A Docker Compose configuration file has also been provided to make it easier to create the bot. If running on a Mac, you can install the necessary packages with homebrew, and setup a VM:
@@ -139,13 +139,13 @@ Note, the output from running `docker-compose up` will contain a URL that can be
 ### Back to configuring access to the Messenger platform
 Return to the Developer Dashboard and navigate to the Messenger platform settings you already started configuring. Under the Webhooks section, select 'Setup webhooks'. In this dialogue, select the 'messages' checkbox and enter your custom defined verification token that you set in the `.env` file. Also add the URL taken from the previous step, but importantly, you need to change it from http to http*s* (as Facebook requires a secure connection). You must also append `/facebook/receive` to the URL. Select 'Verify and save'. You should see the verification message in the output logs of the bot in your terminal and the dashboard should show verification complete. Now under the same webhooks section, subscribe your webhooks to the page you previously created.
 
-<p align="center"><img src="docs/fb_7.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_7.png" width="600px" align="center"></p>
 
 ### Speak to your bot
-You will now be able to navigate to the Facebook page and send a message to your bot. *Note: when doing this, I found that the bot would not be notified of any messages from the Facebook page until around 10+ minutes had passed. There seems to be some delay in provisioning the service, possibly for security, or resource reasons. Once the first messages are received, subsequently messages are received immediately.
+You will now be able to navigate to the Facebook page and send a message to your bot. *Note: when doing this, I found that the bot would not be notified of any messages from the Facebook page until around 10+ minutes had passed. There seems to be some delay in provisioning the service, possibly for security, or resource reasons. Once the first messages are received, subsequently messages are received immediately.*
 
-<p align="center"><img src="docs/fb_8.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_8.png" width="600px" align="center"></p>
 
-<p align="center"><img src="docs/fb_9.png" width="400px" align="center"></p>
+<p align="center"><img src="docs/fb_9.png" width="300px" align="center"></p>
 
 
