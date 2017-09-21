@@ -3,7 +3,7 @@ This repo houses a very basic bootstrap project to create a Slack or Facebook bo
 
 To get you started, this bot implements a couple of basic interactions, which you can use to get started writing your own functionality. If you message the bot directly (using a private message, or by mentioning the bot's name in a channel where it resides) with the word _ping_, it will respond with _pong_. Additionally, for any channel the bot is invited to, it will listen to all messages in that channel, logging them out to the console. For Facebook bots, it will respond directly to 'hello'.
 
-For more information on how to integrate your bot, see the [Botkit documentation for Slack](https://github.com/howdyai/botkit/blob/master/readme-slack.md), or the [Botkit documentation for Facebook](https://github.com/howdyai/botkit/blob/master/readme-facebook.md).
+For more information on how to integrate your bot, see the [Botkit documentation for Slack](https://github.com/howdyai/botkit/blob/master/docs/readme-slack.md), or the [Botkit documentation for Facebook](https://github.com/howdyai/botkit/blob/master/docs/readme-facebook.md).
 
 ## Creating a Slack bot using a 'Custom Integration'
 This is the simplest and quickest way of adding a Bot to your Slack team. The first thing you will need to do is create a custom integration bot configuration, which you will then use to allow your code to connect to the Slack RTM (Real Time Messaging) API. 
